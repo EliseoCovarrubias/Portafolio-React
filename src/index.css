@@ -1,9 +1,27 @@
-body {
-	background: rgb(0, 14, 22)
+*{
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-#site{
-  max-width: 50%;
+body {
+	background: rgb(0, 14, 22);
+}
+
+@media (min-width: 768px) {
+  #site {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #site {
+    max-width: 50%;
+  }
+}
+
+.titulo{
+  text-decoration: underline;
 }
 
 .subtitle{
@@ -12,7 +30,7 @@ body {
 }
 
 .card{
-  background: rgb(3, 35, 53);
+  background: rgb(4, 43, 66);
   min-height: 35rem;
 }
 
