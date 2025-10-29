@@ -1,0 +1,33 @@
+body {
+	background: rgb(0, 14, 22)
+}
+
+#site{
+  max-width: 50%;
+}
+
+.subtitle{
+  color: rgb(18, 140, 253);
+  font-weight: bold;
+}
+
+.card{
+  background: rgb(3, 35, 53);
+  min-height: 35rem;
+}
+
+.tag {
+  border-radius: 5px;
+  padding: .5rem;
+  margin: .1rem;
+  /*color: var(--white-color);*/
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: rgb(0, 14, 22)
+}
+
+.tag-text{
+  font-size: small;
+  color: white;
+}
