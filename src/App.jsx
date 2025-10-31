@@ -1,72 +1,204 @@
+import { useState } from "react";
+import {
+	skillsFrontendList,
+	skillsBackendList,
+	skillsDevList,
+	skillsToolList,
+	projectsList,
+} from "./data/data";
+import FilterNavbar from "./components/FilterNavbar";
 import Project from "./components/Project";
+import Skill from "./components/Skill";
 
 function App() {
+	const [selectedCategory, setSelectedCategory] = useState("All");
+
 	return (
 		<>
-			<div id="site" className="container">
-				<div className="row" >
-					<h2 className="titulo text-white">Experiencia</h2>
+			<div id="site">
+				<nav className="navbar d-flex justify-content-evenly">
+					<a className="p-2" href="#site">
+						Inicio
+					</a>
+					<a className="p-2" href="#Experiencia">
+						Experiencia
+					</a>
+					<a className="p-2" href="#Proyectos">
+						Proyectos
+					</a>
+					<a className="p-2" href="#Tecnologías">
+						Tecnologías
+					</a>
+				</nav>
 
-					<Project
-						key={2}
-						title={"Musicmania"}
-						image={"Musicmania.png"}
-                        technologies={["HTML5", "CSS3", "JavaScript", "Bootstrap", "php", "MySQL", "Git"]}
-						description={
-							"Musicmania es una tienda online de venta de productos con sistema de sesiones, conectada a una base de datos y hosteada en un servidor web"
-						}
-						urlSitio={"https://musicmania-1677.000webhostapp.com/"}
-						urlGithub={"https://github.com/EliseoCovarrubias/Musicmania"}
-					/>
+				<div className="container">
+					{/* Sección Contacto */}
+					<div id="Contacto" className="row mb-3">
+						<div className="col-12 text-center">
+							<a
+								className="btn btn-outline-primary btn-sm mx-2"
+								href="mailto:eliseo.estrada97@hotmail.com"
+								role="button"
+							>
+								<i className="fa-solid fa-envelope" title="Correo"></i> Correo
+							</a>
 
-					<Project
-						key={1}
-						title={"Citas veterinaria"}
-						image={"citas-react02.png"}
-                        technologies={["HTML5", "CSS3", "JavaScript", "Tailwind", "React", "Git"]}
-						description={
-							"Aplicación web desarrollada en React donde se administra citas depacientes de una veterinaria, cuenta con responsive design y guardado de datos en local storage"
-						}
-						urlSitio={"https://citas-react-1677.netlify.app"}
-						urlGithub={"https://github.com/EliseoEstrada/Citas-React"}
-					/>
+							<a
+								className="btn btn-outline-primary btn-sm mx-2"
+								href="https://github.com/EliseoCovarrubias"
+								role="button"
+							>
+								<i className="fa-brands fa-github" title="Github"></i> GitHub
+							</a>
 
-					<Project
-						key={2}
-						title={"Control de gastos"}
-						image={"gastos.png"}
-                        technologies={["HTML5", "CSS3", "JavaScript", "React", "Git"]}
-						description={
-							"Aplicación web desarrollada en React para realizar un control de gastos definiendo un presupuesto con guardado en local storage"
-						}
-						urlSitio={"https://control-gastos-1677.netlify.app/"}
-						urlGithub={"https://github.com/EliseoEstrada/Citas-React"}
-					/>   
+							<a
+								className="btn btn-outline-primary btn-sm mx-2"
+								href="https://www.linkedin.com/in/eliseo-guadalupe-estrada-covarrubias-390675186/"
+								role="button"
+							>
+								<i className="fa-brands fa-linkedin" title="Linkedin"></i>{" "}
+								LinkedIn
+							</a>
 
-					<Project
-						key={3}
-						title={"Cotizador de criptomonedas"}
-						image={"criptos.png"}
-                        technologies={["HTML5", "CSS3", "JavaScript", "React", "Git"]}
-						description={
-							"Aplicación web para cotizar criptomonedas a un tipo de moneda, el sitio consume una API para obtener los datos más recientes de las criptomonedas"
-						}
-						urlSitio={"https://cripto-react-1677.netlify.app/"}
-						urlGithub={"https://github.com/EliseoCovarrubias/cripto-react"}
-					/>                     
+							<a
+								className="btn btn-outline-primary btn-sm mx-2"
+								href="https://wa.me/8118542101"
+								role="button"
+							>
+								<i className="fa-brands fa-whatsapp" title="Github"></i>{" "}
+								Whatsapp
+							</a>
+						</div>
+					</div>
 
-					<Project
-						key={4}
-						title={"GuitarLA"}
-						image={"guitarla.png"}
-                        technologies={["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Git"]}
-						description={
-							"Plataforma web que simula un carrito de compras, usando localStorage para guardar, editar y eliminar productos."
-						}
-						urlSitio={"https://guitarla-1677.netlify.app/"}
-						urlGithub={"https://github.com/EliseoCovarrubias/GuitarLA"}
-					/>               
-                                     
+					{/* Sección Experiencia */}
+					<div id="Experiencia" className="row mb-3">
+						<div className="col-12">
+							<h2 className="titulo text-white my-3">Experiencia</h2>
+						</div>
+						<div className="col-12 experiencia">
+							<h5 className="subtitle d-inline">
+								Analyst III Infrastructure Services -{" "}
+							</h5>
+							<span className="text-warning ">
+								DXC Technology (para Triara)
+							</span>
+							<p className="text-white">Septiembre 2023 - Actualmente</p>
+							<ul className="text-white">
+								<li>
+									Asignado al cliente Triara, encargado del diseño, desarrollo y
+									mantenimiento del portal interno de la empresa.
+								</li>
+								<li>
+									Implementación de soluciones web utilizando HTML, CSS,
+									Bootstrap, JavaScript, AJAX y PHP, mejorando la usabilidad y
+									el rendimiento de las aplicaciones internas.
+								</li>
+								<li>
+									Diseño y administración de bases de datos en SQL Server,
+									optimizando consultas y asegurando la integridad de los datos.
+								</li>
+								<li>
+									Gestión y resolución de tickets en la plataforma Service
+									Manager, reduciendo los tiempos de atención de incidencias.
+								</li>
+								<li>
+									Participación activa en reuniones con equipos de producción y
+									negocio, colaborando en la definición e implementación de
+									nuevas funcionalidades alineadas con los objetivos del
+									cliente.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					{/* Sección Proyectos */}
+					<div id="Proyectos" className="row mb-3">
+						<div className="col-12">
+							<h2 className="titulo text-white my-3">Proyectos</h2>
+						</div>
+
+						<div className="col-12">
+							<FilterNavbar
+								selectedCategory={selectedCategory}
+								setSelectedCategory={setSelectedCategory}
+							/>
+						</div>
+
+						<div className="col-12">
+							<div className="row">
+								{projectsList
+									.filter((project) =>
+										selectedCategory === "All"
+											? true
+											: project.categories.includes(selectedCategory)
+									)
+									.map((project, index) => (
+										<div key={index} className="col-12 col-md-6">
+											<Project {...project} />
+										</div>
+									))}
+							</div>
+						</div>
+					</div>
+
+					{/* Sección Tecnologías */}
+					<div id="Tecnologías" className="row mb-3">
+						<div className="col-12">
+							<h2 className="titulo text-white my-3">Tecnologías</h2>
+							<p className="text-white">
+								En mi viaje por el mundo del desarrollo web, he cultivado
+								experiencia y habilidades en una variedad de tecnologiías. Mi
+								stack tecnólogico incluye:
+							</p>
+						</div>
+						<div className="col-12">
+							<div className="row">
+								<div className="col-12 col-md-6 px-4 mb-4">
+									<h5 className="subtitle text-center">Frontend</h5>
+									<div className="row">
+										{skillsFrontendList.map((skill, index) => (
+											<div key={index} className="col-4 px-3 ">
+												<Skill {...skill} />
+											</div>
+										))}
+									</div>
+								</div>
+								<div className="col-12 col-md-6 px-4 mb-4">
+									<h5 className="subtitle text-center">Backend</h5>
+									<div className="row">
+										{skillsBackendList.map((skill, index) => (
+											<div key={index} className="col-4 px-3 ">
+												<Skill {...skill} />
+											</div>
+										))}
+									</div>
+								</div>
+
+								<div className="col-12 col-md-6 px-4 mb-4">
+									<h5 className="subtitle text-center">Desarrollo</h5>
+									<div className="row">
+										{skillsDevList.map((skill, index) => (
+											<div key={index} className="col-4 px-3 ">
+												<Skill {...skill} />
+											</div>
+										))}
+									</div>
+								</div>
+
+								<div className="col-12 col-md-6 px-4 mb-4">
+									<h5 className="subtitle text-center">Herramientas</h5>
+									<div className="row">
+										{skillsToolList.map((skill, index) => (
+											<div key={index} className="col-4 px-3">
+												<Skill {...skill} />
+											</div>
+										))}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</>
