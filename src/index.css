@@ -6,7 +6,7 @@
 }
 
 body {
-	background: rgb(0, 14, 22);
+  	background: rgb(0, 14, 22);
 }
 
 #site{
@@ -52,6 +52,31 @@ body {
 .subtitle{
   color: rgb(18, 140, 253);
   font-weight: bold;
+}
+
+.typewriter{
+  display: inline-block;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20ch; /* ajustar según la longitud del texto */
+  border-right: 0.12em solid;
+  animation: typing 2.5s steps(24, end) forwards,blink 0.7s step-end infinite;
+}
+
+/* animación: revela carácter por carácter */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 20ch; }
+}
+
+/* para reducir parpadeo en usuarios con preferencia reduce-motion */
+@media (prefers-reduced-motion: reduce){
+  .typewriter { animation: none; width: auto; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
 }
 
 .project{

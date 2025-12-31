@@ -26,7 +26,7 @@ function App() {
 					<a className="p-2" href="#Proyectos">
 						Proyectos
 					</a>
-					<a className="p-2" href="#Tecnologías">
+					<a className="p-2" href="#Tecnologias">
 						Tecnologías
 					</a>
 				</nav>
@@ -34,47 +34,77 @@ function App() {
 				<div className="container">
 					{/* Sección Contacto */}
 					<div id="Contacto" className="row mb-3">
-						<div className="col-12 text-center">
+						<div className="col-12 text-center my-3">
+							<h1 className="text-white ">
+								Eliseo Guadalupe Estrada Covarrubias
+							</h1>
+							<h5 className="subtitle typewriter">Fullstack Developer</h5>
+						</div>
+
+						<div className="col-12 text-center my-3">
 							<a
-								className="btn btn-outline-primary btn-sm mx-2"
+								className="btn btn-outline-primary btn-sm mx-2 mb-2"
 								href="mailto:eliseo.estrada97@hotmail.com"
 								role="button"
+								target="_blank"
 							>
 								<i className="fa-solid fa-envelope" title="Correo"></i> Correo
 							</a>
 
 							<a
-								className="btn btn-outline-primary btn-sm mx-2"
+								className="btn btn-outline-primary btn-sm mx-2 mb-2"
 								href="https://github.com/EliseoCovarrubias"
 								role="button"
+								target="_blank"
 							>
 								<i className="fa-brands fa-github" title="Github"></i> GitHub
 							</a>
 
 							<a
-								className="btn btn-outline-primary btn-sm mx-2"
+								className="btn btn-outline-primary btn-sm mx-2 mb-2"
 								href="https://www.linkedin.com/in/eliseo-guadalupe-estrada-covarrubias-390675186/"
 								role="button"
+								target="_blank"
 							>
 								<i className="fa-brands fa-linkedin" title="Linkedin"></i>{" "}
 								LinkedIn
 							</a>
 
 							<a
-								className="btn btn-outline-primary btn-sm mx-2"
+								className="btn btn-outline-primary btn-sm mx-2 mb-2"
 								href="https://wa.me/8118542101"
 								role="button"
+								target="_blank"
 							>
 								<i className="fa-brands fa-whatsapp" title="Github"></i>{" "}
 								Whatsapp
 							</a>
+							<a
+								className="btn btn-outline-primary btn-sm mx-2 mb-2"
+								href="/"
+								role="button"
+								target="_blank"
+							>
+								<i className="fa-solid fa-file-pdf" title="CV"></i> Mi CV
+							</a>
+						</div>
+
+						<div className="col-12">
+							<h2 className="titulo text-white my-3">Acerca de mi</h2>
+							<p className="text-white">
+								Profesional con amplia experiencia en desarrollo web,
+								actualmente trabajando en DXC Technology en busca de nuevas
+								oportunidades laborales para aplicar y expandir mis
+								conocimientos en la industria de tecnologías y contribuir al
+								crecimiento de una empresa innovadora.{" "}
+							</p>
 						</div>
 					</div>
 
 					{/* Sección Experiencia */}
 					<div id="Experiencia" className="row mb-3">
 						<div className="col-12">
-							<h2 className="titulo text-white my-3">Experiencia</h2>
+							<h2 className="titulo text-white my-2">Experiencia</h2>
 						</div>
 						<div className="col-12 experiencia">
 							<h5 className="subtitle d-inline">
@@ -143,12 +173,12 @@ function App() {
 					</div>
 
 					{/* Sección Tecnologías */}
-					<div id="Tecnologías" className="row mb-3">
+					<div id="Tecnologias" className="row mb-3">
 						<div className="col-12">
 							<h2 className="titulo text-white my-3">Tecnologías</h2>
 							<p className="text-white">
 								En mi viaje por el mundo del desarrollo web, he cultivado
-								experiencia y habilidades en una variedad de tecnologiías. Mi
+								experiencia y habilidades en una variedad de tecnologías. Mi
 								stack tecnólogico incluye:
 							</p>
 						</div>
@@ -158,7 +188,7 @@ function App() {
 									<h5 className="subtitle text-center">Frontend</h5>
 									<div className="row">
 										{skillsFrontendList.map((skill, index) => (
-											<div key={index} className="col-4 px-3 ">
+											<div key={index} className="col-4 p-0 ">
 												<Skill {...skill} />
 											</div>
 										))}
@@ -168,7 +198,7 @@ function App() {
 									<h5 className="subtitle text-center">Backend</h5>
 									<div className="row">
 										{skillsBackendList.map((skill, index) => (
-											<div key={index} className="col-4 px-3 ">
+											<div key={index} className="col-4 p-0 ">
 												<Skill {...skill} />
 											</div>
 										))}
@@ -179,7 +209,7 @@ function App() {
 									<h5 className="subtitle text-center">Desarrollo</h5>
 									<div className="row">
 										{skillsDevList.map((skill, index) => (
-											<div key={index} className="col-4 px-3 ">
+											<div key={index} className="col-4 p-0 ">
 												<Skill {...skill} />
 											</div>
 										))}
@@ -190,7 +220,7 @@ function App() {
 									<h5 className="subtitle text-center">Herramientas</h5>
 									<div className="row">
 										{skillsToolList.map((skill, index) => (
-											<div key={index} className="col-4 px-3">
+											<div key={index} className="col-4 p-0">
 												<Skill {...skill} />
 											</div>
 										))}

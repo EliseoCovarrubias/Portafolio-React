@@ -8,7 +8,6 @@ export default function Project({
 	urlSitio,
 	urlGithub,
 }) {
-
 	return (
 		<>
 			<div className="card rounded border-0 p-1 my-2 project">
@@ -46,15 +45,20 @@ export default function Project({
 							Ver repositorio
 						</a>
 
-						<a
-							className="btn btn-outline-primary btn-sm"
-							href={urlSitio}
-							target="_blank"
-							role="button"
-						>
-							<i className="fa-solid fa-globe web-ico me-2" aria-hidden="true"></i>
-							Ver sitio
-						</a>
+						{urlSitio != null && (
+							<a
+								className="btn btn-outline-primary btn-sm"
+								href={urlSitio}
+								target="_blank"
+								role="button"
+							>
+								<i
+									className="fa-solid fa-globe web-ico me-2"
+									aria-hidden="true"
+								></i>
+								Ver sitio
+							</a>
+						)}
 					</div>
 				</div>
 			</div>
