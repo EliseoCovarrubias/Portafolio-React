@@ -81,7 +81,7 @@ function App() {
 							</a>
 							<a
 								className="btn btn-outline-primary btn-sm mx-2 mb-2"
-								href="/"
+								href={`${import.meta.env.BASE_URL}cv/cv.pdf`}
 								role="button"
 								target="_blank"
 							>
